@@ -6,16 +6,17 @@ function addTask() {
   }
   var ul = document.getElementById("taskList");
   var li = document.createElement("li");
+  var checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.addEventListener("change", function() {
+    if (this.checked) {
+      li.classList.add("completed");
+    } else {
+      li.classList.remove("completed");
+    }
+  });
+  li.appendChild(checkbox);
   li.appendChild(document.createTextNode(input));
   ul.appendChild(li);
   document.getElementById("taskInput").value = "";
-
-  // Add event listener to mark task as complete when clicked
-  li.addEventListener("click", function() {
-    li.classList.toggle("completed");
-  });
-
-  // Add event listener to delete task when double-clicked
-  li.addEventListener("dblclick", function() {
-    ul.removeChild(li);
-  });
+}
