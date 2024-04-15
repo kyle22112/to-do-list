@@ -11,6 +11,12 @@ function addTask() {
   checkbox.addEventListener("change", function() {
     if (this.checked) {
       li.classList.add("completed");
+      // Trigger confetti animation when task is completed
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
     } else {
       li.classList.remove("completed");
     }
