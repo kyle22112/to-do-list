@@ -11,6 +11,7 @@ function addTask() {
   checkbox.addEventListener("change", function() {
     if (this.checked) {
       li.classList.add("completed");
+      console.log("Checkbox checked!");
       // Trigger confetti animation when task is completed
       confetti({
         particleCount: 100,
