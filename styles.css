@@ -1,0 +1,8 @@
+li {
+  display: flex;
+  align-items: center;
+}
+
+li button {
+  margin-left: 10px;
+}
