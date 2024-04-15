@@ -1,8 +1,4 @@
-li {
-  display: flex;
-  align-items: center;
-}
-
 li button {
-  margin-left: 10px;
+  display: block;
+  margin-top: 5px; /* Adjust the margin as needed */
 }
