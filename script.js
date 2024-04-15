@@ -13,13 +13,13 @@ function addTask() {
       li.classList.add("completed");
       console.log("Checkbox checked!");
       // Trigger confetti animation when task is completed
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 }
-      });
-    } else {
-      li.classList.remove("completed");
+      const confetti = new Confetti();
+
+      // Confetti configuration
+      confetti.setCount(50);
+      } else {
+        li.classList.remove("completed");
+     
     }
   });
   var removeButton = document.createElement("button");
