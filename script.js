@@ -11,6 +11,10 @@ function addTask() {
   checkbox.addEventListener("change", function() {
     if (this.checked) {
       li.classList.add("completed");
+      document.getElementById("gif").style.display = "inline"; // Show the GIF
+      document.getElementById("gif").addEventListener("animationend", function() {
+        document.getElementById("gif").style.display = "none"; // Hide the GIF when animation ends
+      });
     } else {
       li.classList.remove("completed");
     }
